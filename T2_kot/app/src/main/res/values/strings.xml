@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">T2_kot</string>
+    <string name="campo_obrigatorio">Campo Obrigatorio</string>
+    <string name="senhas_dif">As senhas não batem!</string>
+</resources>
