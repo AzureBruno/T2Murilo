@@ -14,11 +14,19 @@ class MainActivity : AppCompatActivity() {
         btn_register_main.setOnClickListener {
             nextActivity(RegisterActivity())
         }
+
+        btn_Login.setOnClickListener {
+            nextActivity(ListMoviesActivity())
+        }
     }
 
     private fun nextActivity(Activity : AppCompatActivity) {
         val intent = Intent(applicationContext, Activity::class.java)
         startActivity(intent)
+    }
+
+    private fun checkLogin(userName : String, passWord : String) {
+
     }
 
 }
