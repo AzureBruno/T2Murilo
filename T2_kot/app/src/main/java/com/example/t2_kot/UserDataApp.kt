@@ -8,4 +8,4 @@ class UserDataApp(
      val userName : String,
      val userPass : String,
     @PrimaryKey(autoGenerate = true)
-    private val id : Long = 0)
+    val id : Long = 0)

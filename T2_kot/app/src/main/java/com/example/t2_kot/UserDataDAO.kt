@@ -10,6 +10,12 @@ interface UserDataDAO {
     @Query("SELECT * FROM userdataapp")
     fun all(): List<UserDataApp>
 
+    @Query("SELECT * FROM userdataapp WHERE userName == :userName")
+    fun getLoginUser(userName: String): List<UserDataApp>
+
+    @Query("SELECT * FROM userdataapp WHERE userPass == :userPass")
+    fun getLoginPass(userPass: String): List<UserDataApp>
+
     @Insert
     fun add(vararg userDatumApps : UserDataApp)
 }

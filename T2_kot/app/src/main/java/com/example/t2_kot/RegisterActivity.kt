@@ -26,7 +26,8 @@ class RegisterActivity : AppCompatActivity() {
             var userPass: String = ed_txt_register_pass.text.toString()
             var userPassConfirm: String = ed_txt_register_pass2.text.toString()
             if (userPass == userPassConfirm) {
-                val newUser = UserDataApp(userName, userPass)
+                userDataDao.add(UserDataApp(userName, userPass))
+                onBackPressed()
             } else if (userPass.isEmpty()) {
                 ed_txt_register_pass.error = getString(R.string.campo_obrigatorio)
             } else if (userPassConfirm.isEmpty()) {
